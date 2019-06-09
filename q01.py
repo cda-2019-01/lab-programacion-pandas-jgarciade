@@ -8,7 +8,7 @@ import pandas as pd
 def main(file_path, sep='\t'):
     file_to_process = pd.read_csv(file_path, sep=sep)
     grouped = file_to_process.groupby('_c1')
-    return grouped.size()
+    return pd.Series(grouped.size(), name='_c0')
 
 if __name__ == "__main__":
     result = main('tbl0.tsv')

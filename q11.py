@@ -15,7 +15,7 @@ def main(file_path, sep='\t'):
     df = pd.DataFrame()
     df['_c0'] = grouped_list.keys()
     df['lista'] = [val for val in grouped_list]
-    df['lista'] = [':'.join(str(v) for v in sorted(x)) for x in df['lista']]
+    df['lista'] = [','.join(str(v) for v in sorted(x)) for x in df['lista']]
 
     return df
 

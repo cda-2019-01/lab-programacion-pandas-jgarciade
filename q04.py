@@ -12,7 +12,7 @@ def main(file_path, sep='\t'):
     values = values.map(lambda x:x.upper())
     unique_values = values.unique()
     unique_values.sort()
-    return unique_values
+    return [x for x in unique_values]
 
 if __name__ == "__main__":
     result = main('tbl1.tsv')
